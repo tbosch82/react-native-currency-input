@@ -22,6 +22,7 @@ const FakeCurrencyInput = React.forwardRef<TextInput, FakeCurrencyInputProps>(
       onFocus,
       onBlur,
       caretWeight,
+      textProps,
       ...rest
     } = props;
 
@@ -31,7 +32,8 @@ const FakeCurrencyInput = React.forwardRef<TextInput, FakeCurrencyInputProps>(
     return (
       <View style={[containerStyle, styles.inputContainer]}>
         <TextWithCursor
-          style={style}
+          {...textProps}
+          style={[style, textProps?.style]}
           cursorVisible={focused && !caretHidden}
           cursorProps={{
             style: {

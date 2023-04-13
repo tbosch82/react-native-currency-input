@@ -133,6 +133,11 @@ export interface FakeCurrencyInputProps extends CurrencyInputProps {
    * Font weight of the caret. Defaults to use text style
    */
   caretWeight?: TextStyle['fontWeight'];
+
+  /**
+   * Prop overrides for the TextWithCursor component
+   */
+  textProps?: TextProps;
 }
 
 export interface TextWithCursorProps extends TextProps {
